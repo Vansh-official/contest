@@ -1,0 +1,107 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<set>
+#include<map>
+#include<utility>
+#include<algorithm>
+#include<math.h>
+#include<cmath>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        if(n%2==0)
+        {
+            if(k<=n)
+            {
+                cout<<k<<endl;
+            }
+            else
+            {
+                if(k%n==0)
+                {
+                    cout<<n<<endl;
+                }
+                else
+                {
+                    cout<<k%n<<endl;
+                }
+            }
+            continue;
+        }
+        if(k<=n/2)
+        {
+            cout<<k<<endl;
+            continue;
+        }
+        if(k==(n/2)+1)
+        {
+            cout<<k+1<<endl;
+            continue;
+        }
+        int a=(n/2)+1,b=(n/2)+2;
+        k-=(n/2)+1;
+        k=k%(n*(n/2));
+        if(k==0)
+        {
+            cout<<b<<endl;
+            continue;
+        }
+        while(k!=0)
+        {
+            if(k<n/2)
+            {
+                if(b+k<=n)
+                {
+                    cout<<b+k<<endl;
+                }
+                else
+                {
+                    cout<<b+k-n<<endl;
+                }
+                break;
+            }
+            else if(k==n/2)
+            {
+                if(b+k+1<=n)
+                {
+                    cout<<b+k+1<<endl;
+                }
+                else
+                {
+                    cout<<b+k+1-n<<endl;
+                }
+                break;
+            }
+            else
+            {
+                k-=(n/2);
+                if(a-(n/2)>=1)
+                {
+                    a-=(n/2);
+                }
+                else
+                {
+                    a-=(n/2);
+                    a=n+a;
+                }
+                if(b+(n/2)+1<=n)
+                {
+                    b+=(n/2)+1;
+                }
+                else
+                {
+                    b=b+(n/2)+1-n;
+                }
+            }
+        }
+    }
+}

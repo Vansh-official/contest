@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "climits": "cpp",
+        "algorithm": "cpp",
+        "cmath": "cpp"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "xiosbase": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "xtree": "cpp",
+        "vector": "cpp"
+    }
+}
